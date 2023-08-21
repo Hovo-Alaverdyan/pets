@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Poppins:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --yellow: #fcdd26;
+    --black: #333;
+    --wite: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    font-family: 'Montserrat', sans-serif;
+}
+
+::selection {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1.2rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+    border-radius: .5rem;
+}
+
+section {
+    padding: 2rem 5%;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: var(--black);
+    padding: .5rem 1rem;
+    background: var(--yellow);
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .3);
+}
+
+.btn:hover {
+    background: var(--black);
+    color: var(--wite);
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--black);
+    margin: 1.5rem 0;
+}
+
+.heading i {
+    color: var(--yellow);
+}
+
+/* ......Header..... */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--wite);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+header #menu-bar {
+    font-size: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+
+}
+
+header #menu-bar:hover {
+    color: var(--yellow);
+}
+
+header .logo {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+header .logo i {
+    color: var(--yellow);
+    transform: rotate(-65deg);
+}
+
+header .navbar a {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-right: .7rem;
+}
+
+header .navbar a:hover {
+    text-decoration: underline;
+    color: var(--yellow);
+}
+
+header .icons i {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-left: .5rem;
+}
+
+header .icons i:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+/* ....search-bar..... */
+
+header .search-bar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--yellow);
+    padding: .5rem;
+    transform: scaleY(0);
+}
+
+header .search-bar.active {
+    transform: scaleY(1);
+}
+
+header .search-bar input {
+    width: 100%;
+    padding: .5rem;
+    border-radius: .5rem;
+    margin-right: .5rem;
+    font-size: 1rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+header .search-bar label {
+    font-size: 1.2rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+/* .....Home.... */
+
+.home {
+    height: 85vh;
+    background: url(../images/home-bg.webp) center no-repeat;
+    background-size: cover;
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .content span {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.home .content h1 {
+    font-size: 3.5rem;
+    color: var(--black);
+    margin: .5rem 0;
+}
+
+.home .content .btn {
+    background: var(--wite);
+    color: var(--black);
+}
+
+.home .content .btn:hover {
+    background: var(--black);
+    color: var(--wite);
+}
+
+/* .....Category...... */
+
+.Category .inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.Category .inner .box {
+    width: 24%;
+}
+
+.Category .inner .box img {
+    width: 100%;
+}
+
+.Category .inner .box h3 {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin: .5rem 0;
+}
+
+/* ....Featured..... */
+
+.Featured .inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Featured .inner .box {
+    width: 49%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .3);
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+    padding: .5rem;
+    position: relative;
+}
+
+.Featured .inner .box img {
+    width: 40%;
+}
+
+.Featured .inner .box:hover {
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.Featured .inner .box span {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.3rem;
+    color: var(--black);
+    background: var(--yellow);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+}
+
+.Featured .inner .box .content .stars i {
+    color: var(--yellow);
+    font-size: 1rem;
+}
+
+.Featured .inner .box .content h3 {
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: .5rem 0;
+}
+
+.Featured .inner .box .content p {
+    font-size: 1rem;
+    color: var(--black);
+    margin-bottom: .5rem;
+}
+
+/* ....Food....*/
+
+.Food {
+    height: 85vh;
+    background: url(../images/deal-bg.webp) center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Food .content {
+    text-align: center;
+}
+
+.Food .content span {
+    font-size: 1.5rem;
+    cursor: var(--black);
+}
+
+.Food .content h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin: .5rem 0;
+}
+
+/* ..... Products.....*/
+
+.Products .inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.Products .inner .box {
+    width: 24%;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+}
+
+.Products .inner .box img {
+    width: 49%;
+}
+
+.Products .inner .box .content .stars i {
+    font-size: 1rem;
+    color: var(--yellow);
+}
+
+.Products .inner .box .content h3 {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin: .5rem 0;
+}
+
+.Products .inner .box .content p {
+    font-size: 1.2rem;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.Products .inner .box .content p span {
+    color: #666;
+    font-size: .9rem;
+    text-decoration: line-through;
+}
+
+.Products .inner .box .content .btn {
+    font-size: .9rem;
+    margin-top: .5rem;
+    padding: .3rem .5rem;
+}
+
+/* ..... Offer......*/
+
+.Offer .inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.Offer .inner .box {
+    width: 49%;
+    position: relative;
+}
+
+.Offer .inner .box img {
+    width: 100%;
+}
+
+.Offer .inner .box .content {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.Offer .inner .box .content span {
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+.Offer .inner .box .content h3 {
+    font-size: 2rem;
+    color: var(--black);
+    margin: .5rem 0;
+}
+
+.Offer .inner .box .content .btn {
+    background: var(--wite);
+}
+
+.Offer .inner .box .content .btn:hover {
+    background: var(--black);
+    color: var(--wite);
+}
+
+/* ....Contact..... */
+
+.Contact {
+    height: 85vh;
+    background: url(../images/contact-bg.webp) center no-repeat;
+    background-size: cover;
+}
+
+.Contact .heading i {
+    color: var(--wite);
+}
+
+.Contact form {
+    text-align: center;
+}
+
+.Contact form .inputBox input {
+    width: 48%;
+    padding: .5rem;
+    border-radius: .5rem;
+    margin: .5rem;
+    font-size: 1.1rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.Contact form .inputBox::placeholder {
+    text-transform: capitalize;
+}
+
+.Contact form textarea {
+    width: 97%;
+    height: 17rem;
+    resize: none;
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: .5rem;
+    font-size: 1.1rem;
+    color: var(--black);
+    text-transform: none;
+}
+
+.Contact form .btn {
+    background: var(--wite);
+}
+
+.Contact form .btn:hover {
+    background: var(--black);
+    color: var(--wite);
+}
+
+/* .....Footer.... */
+
+footer {
+    text-align: center;
+}
+
+footer .inner a i {
+    font-size: 1.5rem;
+    color: var(--black);
+    background: var(--yellow);
+    border-radius: 50%;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+footer .inner a i:hover {
+    background: var(--black);
+    color: var(--wite);
+}
+
+footer h6 {
+    font-size: 1.3rem;
+    cursor: var(--black);
+}
+
+footer h6 a {
+    color: var(--yellow);
+}
+
+footer h6 a:hover {
+    text-decoration: underline;
+    color: var(--black);
+}
+
+/* ......Media....... */
+
+@media(max-width: 1200px) {
+
+    html {
+        font-size: 90%;
+    }
+
+    .Products .inner .box {
+        width: 23%;
+    }
+
+    .Products .inner .box img {
+        width: 49%;
+    }
+
+    .Products .inner .box .content .stars i {
+        font-size: 90%;
+    }
+
+    .Products .inner .box .content h3 {
+        font-size: 90%;
+    }
+
+    .Products .inner .box .content p {
+        font-size: 90%;
+    }
+
+    .Products .inner .box .content .btn {
+        font-size: 80%;
+    }
+
+    .Contact form .inputBox input {
+        width: 47%;
+    }
+
+    .Featured .inner .box span {
+        font-size: 80%;
+        top: .5rem;
+        right: .5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+}
+
+@media(max-width: 979px) {
+    html {
+        font-size: 80%;
+    }
+
+    header #menu-bar {
+        display: inline;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--black);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        color: var(--wite);
+        background: #222;
+        padding: .5rem;
+        margin: .5rem;
+        border-radius: .5rem;
+    }
+
+    .Contact form textarea {
+        height: 27rem;
+        width: 95%;
+    }
+
+    .home {
+        height: 60vh;
+    }
+
+    .food {
+        height: 50vh;
+    }
+}
+
+@media(max-width: 767px) {
+    .Category .inner .box {
+        width: 48%;
+    }
+
+    .Category .inner .box img {
+        width: 100%;
+    }
+
+    .Products .inner .box {
+        width: 48%;
+    }
+
+    .Products .inner .box img {
+        width: 60%;
+    }
+}
+
+@media(max-width: 550px) {
+
+    html {
+        font-size: 45%;
+    }
+
+    .home {
+        height: 25vh;
+    }
+
+
+    .Contact {
+        height: 40vh;
+    }
+
+    .Contact form textarea {
+        height: 15rem;
+        width: 80%;
+    }
+
+    footer h6 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .Food {
+        height: 25vh;
+    }
+
+    .Food .content h3 {
+        font-size: 1.7rem;
+    }
+}
